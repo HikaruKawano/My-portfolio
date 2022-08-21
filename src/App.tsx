@@ -1,5 +1,11 @@
+import Portfolio from "./pages/portfolio";
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
-  return <h1>Hello word</h1>
+  return (
+    <div>
+      <Portfolio />
+    </div>
+  );
 }
 
 export default App
