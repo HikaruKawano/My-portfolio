@@ -1,14 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
-
-export default createGlobalStyle`
-*{
-    margin: 0;
-    padding: 0;
-    outline:0;
-    box-sizing:border-box;
-}
-`;
 
 export const Container = styled.div`
   background: var(--ColorPrincipal);
