@@ -4,10 +4,23 @@ import {Container} from './styles';
 
 type Props = {
  children: JSX.Element[],
+ color?: string,
+ width?: string,
+ height?: string
 };
-const card: React.FC <Props> = ({ children}:Props) => {
+const card: React.FC <Props> = ({ 
+  children,
+  color,
+  width,
+  height,
+}:Props) => {
+
   return (
-    <Container>
+    <Container 
+      color={color}
+      width={width}
+      height={height}
+    >
       {children}
     </Container>
   );

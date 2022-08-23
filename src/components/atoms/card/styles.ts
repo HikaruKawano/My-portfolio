@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background: var(--ColorSecundario);
-  width: 330px;
-  height: 430px; 
+interface props {
+  width?: string,
+  height?: string,
+}
+
+export const Container = styled.div<props>`
+  background: ${(props => props.color)}; 
+  width: ${(props => props.width)};
+  height: ${(props => props.height)}; 
   margin-left: 50px;
   margin-top: 50px;
   border-radius: 15px;
