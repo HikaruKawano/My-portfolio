@@ -3,6 +3,10 @@ import styled from 'styled-components';
 interface props {
   width?: string,
   height?: string,
+  display?: string,
+  align?: string,
+  justify?: string,
+  direction?: string,
 }
 
 export const Container = styled.div<props>`
@@ -13,8 +17,8 @@ export const Container = styled.div<props>`
   margin-top: 50px;
   border-radius: 15px;
   box-shadow: 1px 1px 15px 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: ${(props => props.display)};
+  justify-content: ${(props => props.justify)};
+  align-items: ${(props => props.align)};
+  flex-direction: ${(props => props.direction)};
 `;

@@ -7,12 +7,20 @@ type Props = {
  color?: string,
  width?: string,
  height?: string
+ display?: string,
+ align?: string,
+  justify?: string,
+  direction?: string,
 };
 const card: React.FC <Props> = ({ 
   children,
   color,
   width,
   height,
+  direction,
+  display,
+  align,
+  justify,
 }:Props) => {
 
   return (
@@ -20,6 +28,10 @@ const card: React.FC <Props> = ({
       color={color}
       width={width}
       height={height}
+      display={display}
+      align={align}
+      justify={justify}
+      direction={direction}
     >
       {children}
     </Container>

@@ -1,12 +1,17 @@
 import styled from 'styled-components';
-import background from '../../assets/background2.jpg';
 
-export const Container = styled.div`
-  background-image:url(${background});
-  height: 100vh;
-  padding: 50px;
+
+interface props{
+  display: string;
+  mb?: string;
+  height?: string;
+}
+
+export const Container = styled.div<props>`
+  height: ${(props => props.height)};
+  margin-bottom: ${(props => props.mb )} ;
   background-size: cover;
-  display: flex;
+  display: ${(props => props.display)};
 `;
 
 export const Title = styled.h1`
